@@ -1,0 +1,4 @@
+<%= form_for  [@post, @comments], url:{:controller=>'comments', :action=>'create'} do |f| %>
+	<%= f.text_area :content %>
+	<%= f.submit "Enviar" %>
+<% end %>

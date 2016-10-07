@@ -1,0 +1,47 @@
+<h1>Pages#index</h1>
+<p>Find me in app/views/pages/index.html.erb</p>
+<div style='width: 800px;'>
+ <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+
+
+<div id="demo"> </div>
+<button onclick="getLocation()">Try It</button>
+
+
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?
+key=AIzaSyCA-XMydmOSqdOi5Yj6fiPcr3Fq3Mk9Wu8&callback=initMap"
+async defer></script>
+
+<script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js
+"></script>
+
+
+<script>
+function initMap(){
+ handler = Gmaps.build('Google');
+ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){});
+};
+</script>
+
+<script>
+	var x = document.getElementById("demo");
+	function getLocation() {
+ 	if (navigator.geolocation) {
+ 		navigator.geolocation.getCurrentPosition(showPosition);
+ 	} else {
+ 	x.innerHTML = "Geolocation is not supported by this browser.";
+ 	}
+	}
+	function showPosition(position) {
+ 		x.innerHTML = "Latitude: " + position.coords.latitude +
+ 		"<br>Longitude: " + position.coords.longitude;
+	}
+</script>

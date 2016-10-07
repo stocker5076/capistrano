@@ -1,0 +1,1 @@
+json.partial! "cumpleanios/cumpleanio", cumpleanio: @cumpleanio

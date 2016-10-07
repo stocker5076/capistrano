@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @cumpleanio.fecha %>
+</p>
+<p>
+	<strong>Nombre:</strong>
+	<%= @cumpleanio.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_cumpleanio_path(@cumpleanio) %> |
+<%= link_to 'Back', cumpleanios_path %>

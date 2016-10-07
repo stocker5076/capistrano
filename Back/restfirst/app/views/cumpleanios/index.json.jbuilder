@@ -1,0 +1,1 @@
+json.array! @cumpleanios, partial: 'cumpleanios/cumpleanio', as: :cumpleanio
